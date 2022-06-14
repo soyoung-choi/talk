@@ -18,7 +18,6 @@
     "socket.io": "^4.5.1"
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0",
     "nodemon": "^2.0.16"
   }
 }
