@@ -4,18 +4,24 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "cross-env NODE_ENV=production PORT=80 pm2 start ./bin/www -i 0",
+    "dev": "nodemon ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "csurf": "^1.11.0",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "helmet": "^5.1.0",
+    "hpp": "^0.2.3",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
-    "socket.io": "^4.5.1"
+    "pm2": "^5.2.0",
+    "socket.io": "^4.5.1",
+    "winston": "^3.7.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
